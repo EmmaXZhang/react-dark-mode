@@ -2,7 +2,11 @@ import { useState } from "react";
 
 const Header = () => {
   const [clicked, setClicked] = useState(true);
-  const [buttonText, setButtonText] = useState("");
+  const buttonText = clicked ? "Light Mode" : "Dark Mode";
+
+  function handleModeChange() {
+    setClicked(!clicked);
+  }
 
   return (
     <header>
@@ -34,7 +38,7 @@ const Header = () => {
             <a href="#contact">CONTACT</a>
           </li>
           <li>
-            <button>{buttonText}</button>
+            <button onClick={handleModeChange}>{buttonText}</button>
           </li>
         </ul>
       </nav>

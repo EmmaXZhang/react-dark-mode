@@ -1,3 +1,7 @@
 export default function Nav() {
-  return <nav></nav>;
+  return (
+    <nav>
+      <p>coming soon</p>
+    </nav>
+  );
 }
