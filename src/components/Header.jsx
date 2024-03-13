@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 const Header = () => {
+  const [clicked, setClicked] = useState(true);
+  const [buttonText, setButtonText] = useState("");
+
   return (
     <header>
       <nav>
@@ -29,12 +34,12 @@ const Header = () => {
             <a href="#contact">CONTACT</a>
           </li>
           <li>
-            <button>theme button</button>
+            <button>{buttonText}</button>
           </li>
         </ul>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
