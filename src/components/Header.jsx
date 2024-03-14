@@ -1,9 +1,9 @@
 import Nav from "./Nav";
 
-const Header = ({ buttonText, handleModeChange }) => {
+const Header = ({ theme, handleModeChange }) => {
   return (
     <header>
-      <Nav buttonText={buttonText} handleModeChange={handleModeChange} />
+      <Nav theme={theme} handleModeChange={handleModeChange} />
     </header>
   );
 };

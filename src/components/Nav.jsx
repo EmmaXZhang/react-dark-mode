@@ -1,4 +1,6 @@
-export default function Nav({ buttonText, handleModeChange }) {
+export default function Nav({ theme, handleModeChange }) {
+  const buttonText = theme === "light-mode" ? "Light Mode" : "Dark Mode";
+
   return (
     <nav>
       <svg

@@ -6,17 +6,20 @@ import { useState } from "react";
 
 function App() {
   const [theme, setTheme] = useState("light-mode");
-  const [clicked, setClicked] = useState(true);
-  const buttonText = clicked ? "Light Mode" : "Dark Mode";
+  // const [clicked, setClicked] = useState(true);
 
   function handleModeChange() {
-    setClicked(!clicked);
-    setTheme(clicked ? "dark-mode" : "light-mode");
+    if (theme === "light-mode") {
+      setTheme("dark-mode");
+    } else {
+      setTheme("light-mode");
+    }
   }
 
   return (
     <div>
-      <Header handleModeChange={handleModeChange} buttonText={buttonText} />
+      <Header theme={theme} handleModeChange={handleModeChange} />
+      {/* <Header handleModeChange={handleModeChange} buttonText={buttonText} /> */}
       <Main theme={theme} />
       <Footer theme={theme} />
     </div>
